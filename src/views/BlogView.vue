@@ -1,5 +1,5 @@
 <template>
-  <h1>Lista de tus blogs</h1>
+  <h1>Bienvenido al blog: {{ $route.params.post }}</h1>
 </template>
 
 <!-- <script>
