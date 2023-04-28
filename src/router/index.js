@@ -29,6 +29,11 @@ const routes = [
     path: '/user/:user/post/:post',
     name: 'userPost',
     component: () => import('../views/UserPostView.vue')
+  },
+  {
+    path: '/:pathMatch(.*)',
+    name: 'notFound',
+    component: () => import('../views/NotFoundView.vue')
   }
 ]
 
