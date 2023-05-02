@@ -31,6 +31,16 @@ const routes = [
     component: () => import('../views/UserPostView.vue')
   },
   {
+    path: '/compras/:ordenId(\\d+)',
+    name: 'Orden',
+    component: () => import('../views/OrdenView.vue')
+  },
+  {
+    path: '/compras/:productName',
+    name: 'Producto',
+    component: () => import('../views/ProductoView.vue')
+  },
+  {
     path: '/:pathMatch(.*)',
     name: 'notFound',
     component: () => import('../views/NotFoundView.vue')
