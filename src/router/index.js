@@ -41,6 +41,23 @@ const routes = [
     component: () => import('../views/ProductoView.vue')
   },
   {
+    path: '/users/:userId(\\d+)?',
+    name: 'Users',
+    component: () => import('../views/UsersView.vue'),
+    children:[
+      {
+        path:'',
+        component:()=>import('../views/users/IndexView.vue')
+      },
+      {path:'profile',
+      component:()=>import('../views/users/ProfileView.vue')},
+    {
+      path:'courses',
+      component:()=>import('../views/users/CoursesView.vue')
+    }
+    ]
+  },
+  {
     path: '/:pathMatch(.*)',
     name: 'notFound',
     component: () => import('../views/NotFoundView.vue')
