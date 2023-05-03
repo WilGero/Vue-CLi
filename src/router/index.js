@@ -16,7 +16,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: '/blog',
+    path:'/blog',
+    redirect:{name:'blog'}
+  },
+  {
+    path: '/post',
     name: 'blog',
     component: () => import('../views/BlogView.vue')
   },
@@ -54,8 +58,13 @@ const routes = [
       {path:'profile',
       name:'userProfile',
       component:()=>import('../views/users/ProfileView.vue')},
+      {
+        path:'courses',
+        redirect:{name:'userCourses'}
+      },
+
     {
-      path:'courses',
+      path:'cursos',
       name:'userCourses',
       component:()=>import('../views/users/CoursesView.vue')
     }
