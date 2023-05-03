@@ -48,12 +48,15 @@ const routes = [
     children:[
       {
         path:'',
+        name:'userIndex',
         component:()=>import('../views/users/IndexView.vue')
       },
       {path:'profile',
+      name:'userProfile',
       component:()=>import('../views/users/ProfileView.vue')},
     {
       path:'courses',
+      name:'userCourses',
       component:()=>import('../views/users/CoursesView.vue')
     }
     ]

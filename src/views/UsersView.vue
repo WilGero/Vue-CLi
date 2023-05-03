@@ -7,9 +7,9 @@
         <h2>Aqui podras ver la lista de un usuarios</h2>
     </div>
     <nav>
-    <router-link :to="'/users/'+$route.params.userId">Index</router-link> |
-    <router-link :to="'/users/'+$route.params.userId+'/courses'">Cursos</router-link> |
-    <router-link :to="'/users/'+$route.params.userId+'/profile'">Profile</router-link>
+    <router-link :to="{name:'userIndex',params:{'userId':$route.params.userId}}">Index</router-link> |
+    <router-link :to="{name:'userProfile',params:{'userId':$route.params.userId}}">Cursos</router-link> |
+    <router-link :to="{name:'userCourses',params:{'userId':$route.params.userId}}">Profile</router-link>
   </nav>
   <router-view/>
 </template>
