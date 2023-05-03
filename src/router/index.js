@@ -44,6 +44,7 @@ const routes = [
     path: '/users/:userId(\\d+)?',
     name: 'Users',
     component: () => import('../views/UsersView.vue'),
+    // rutas hijas
     children:[
       {
         path:'',
